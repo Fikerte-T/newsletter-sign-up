@@ -20,3 +20,18 @@
   list-style-image: url('/assets/images/icon-list.svg');
 }
 
+.error {
+  border: 1px solid theme('colors.customTomato');
+  color: theme('colors.customTomato');
+  background-color: theme('colors.customTomato/20%');
+}
+
+.error:focus {
+  outline: none;
+}
+
+.block {
+  color: theme('colors.customTomato');
+  float: right;
+  font-weight: bold;
+}

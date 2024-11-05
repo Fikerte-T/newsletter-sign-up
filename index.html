@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <title  >Frontend Mentor | Newsletter sign-up form with success message</title>
   <link rel="stylesheet" href="dist/style.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -23,10 +23,11 @@
           <li class="p-1">Measuring to ensure updates are a success</li>
           <li class="p-1"> And much more!</li>
         </ul>
-        <form action="">
+        <form id="form" novalidate >
           <label for="email" class="text-customDarkSlateGrey font-bold">Email address</label>
-          <input class="border border-customGrey rounded-lg w-full p-4 my-2" name="email" type="email" placeholder="email@company.com" required> 
-          <button class="my-3 bg-customDarkSlateGrey text-customWhite w-full p-4 font-bold rounded-lg" type="submit">Subscribe to monthly newsletter</button>
+          <span id="errorMessage" class="hidden">Valid Email Required</span>
+          <input id="email" class="border border-customGrey rounded-lg w-full p-4 my-2" name="email" type="email" placeholder="email@company.com" required> 
+          <button id="submit-btn" class="my-3 bg-customDarkSlateGrey text-customWhite w-full p-4 font-bold rounded-lg hover:bg-gradient-to-r from-customTomato to-orange-400" type="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
     </div>
@@ -45,6 +46,11 @@
   </div>
 
   <!-- Success message end -->
-  
+<script src="formHandling.js"></script>
+<script>
+  // Access the form element and attach the handleSubmit function to its submit event
+  const form = document.getElementById('form');
+  form.onsubmit = handleSubmit;
+</script>
 </body>
 </html>
