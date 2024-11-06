@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <title  >Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="dist/style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-custom">
+  <main class="min-h-screen max-w-full bg-customCharcoalGrey flex flex-col justify-center items-center ">
+    <div id="form-page" class="bg-customWhite flex flex-col max-w-sm lg:max-w-[55rem] lg:rounded-3xl lg:flex-row-reverse ">
+      <picture class="max-w-full h-auto lg:p-6">
+        <source class="" srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1024px)">
+        <img class="w-full h-auto" src="assets/images/illustration-sign-up-mobile.svg" alt="">   
+      </picture>
+      <div class="px-6 py-8 flex flex-col justify-center lg:w-[50%] lg:pl-12">
+        <h2 class="text-[2.5rem] lg:text-[3.5rem] font-bold text-customDarkSlateGrey">Stay updated!</h2>
+        <p class="pt-3 text-customCharcoalGrey">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="text-customCharcoalGrey custom-list px-7 py-6">
+          <li class="">Product discovery and building what matters</li>
+          <li class="p-1">Measuring to ensure updates are a success</li>
+          <li class="p-1"> And much more!</li>
+        </ul>
+        <form id="form" novalidate >
+          <label for="email" class="text-customDarkSlateGrey font-bold">Email address</label>
+          <span id="errorMessage" class="hidden">Valid Email Required</span>
+          <input id="email" class="border border-customGrey rounded-lg w-full p-4 my-2" name="email" type="email" placeholder="email@company.com" required> 
+          <button id="submit-btn" class="my-3 bg-customDarkSlateGrey text-customWhite w-full p-4 font-bold rounded-lg hover:bg-gradient-to-r from-customTomato to-orange-400" type="submit">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+    </div>
+    <div id="success-page" class="flex flex-col justify-center items-start bg-customWhite max-w-sm pt-36 px-5 py-10 lg:p-10 min-h-screen lg:min-h-min lg:max-w-sm lg:rounded-2xl">
+      <img src="assets/images/icon-success.svg" />
+      <h2 class="text-[2.5rem] font-bold text-customDarkSlateGrey leading-10 pt-7">Thanks for subscribing!</h2>
+      <p class="pt-7 text-customCharcoalGrey"> A confirmation email has been sent to <strong class="submitted-email"></strong>. 
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button id="dismiss-btn" class="bg-customDarkSlateGrey text-customWhite w-full p-4 font-bold rounded-lg hover:bg-gradient-to-r from-customTomato to-orange-400 mt-auto">Dismiss message</button>
+    </div>
+  </main>
+
+<script src="formHandling.js"></script>
+<script>
+  const form = document.getElementById('form');
+  form.onsubmit = handleSubmit;
+  const dismissBtn = document.getElementById('dismiss-btn')
+  dismissBtn.onclick = handleDismiss;
+</script>
+</body>
+</html>
