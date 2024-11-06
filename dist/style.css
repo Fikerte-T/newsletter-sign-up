@@ -564,10 +564,6 @@ video {
   margin-bottom: 0.75rem;
 }
 
-.mt-7 {
-  margin-top: 1.75rem;
-}
-
 .mt-auto {
   margin-top: auto;
 }
@@ -588,10 +584,6 @@ video {
   height: auto;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -600,16 +592,8 @@ video {
   width: 100%;
 }
 
-.max-w-\[375px\] {
-  max-width: 375px;
-}
-
 .max-w-full {
   max-width: 100%;
-}
-
-.max-w-screen-sm {
-  max-width: 640px;
 }
 
 .max-w-sm {
@@ -628,20 +612,8 @@ video {
   align-items: center;
 }
 
-.justify-end {
-  justify-content: flex-end;
-}
-
 .justify-center {
   justify-content: center;
-}
-
-.place-self-end {
-  place-self: end;
-}
-
-.self-end {
-  align-self: flex-end;
 }
 
 .rounded-lg {
@@ -686,12 +658,13 @@ video {
   padding: 0.25rem;
 }
 
-.p-10 {
-  padding: 2.5rem;
-}
-
 .p-4 {
   padding: 1rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .px-6 {
@@ -704,6 +677,11 @@ video {
   padding-right: 1.75rem;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -714,34 +692,16 @@ video {
   padding-bottom: 2rem;
 }
 
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .pt-3 {
   padding-top: 0.75rem;
 }
 
-.pt-7 {
-  padding-top: 1.75rem;
-}
-
-.pt-32 {
-  padding-top: 8rem;
-}
-
-.pt-40 {
-  padding-top: 10rem;
-}
-
 .pt-36 {
   padding-top: 9rem;
+}
+
+.pt-7 {
+  padding-top: 1.75rem;
 }
 
 .font-custom {
@@ -824,24 +784,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:flex {
-    display: flex;
-  }
-
-  .lg\:h-fit {
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-
-  .lg\:h-auto {
-    height: auto;
-  }
-
-  .lg\:min-h-fit {
-    min-height: -moz-fit-content;
-    min-height: fit-content;
-  }
-
   .lg\:min-h-min {
     min-height: -moz-min-content;
     min-height: min-content;
@@ -859,12 +801,6 @@ video {
     max-width: 24rem;
   }
 
-  @media (min-width: 1024px) {
-    .lg\:lg\:max-w-sm {
-      max-width: 24rem;
-    }
-  }
-
   .lg\:flex-row-reverse {
     flex-direction: row-reverse;
   }
@@ -877,20 +813,16 @@ video {
     border-radius: 1.5rem;
   }
 
-  .lg\:p-6 {
-    padding: 1.5rem;
-  }
-
   .lg\:p-10 {
     padding: 2.5rem;
   }
 
-  .lg\:pl-12 {
-    padding-left: 3rem;
+  .lg\:p-6 {
+    padding: 1.5rem;
   }
 
-  .lg\:pt-7 {
-    padding-top: 1.75rem;
+  .lg\:pl-12 {
+    padding-left: 3rem;
   }
 
   .lg\:text-\[3\.5rem\] {
