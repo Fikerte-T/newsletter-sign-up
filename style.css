@@ -16,6 +16,10 @@
   font-style: normal;
 }
 
+#success-page {
+  display: none;
+}
+
 .custom-list {
   list-style-image: url('/assets/images/icon-list.svg');
 }

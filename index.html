@@ -10,7 +10,7 @@
 </head>
 <body class="font-custom">
   <main class="min-h-screen max-w-full bg-customCharcoalGrey flex flex-col justify-center items-center ">
-    <div class="bg-customWhite max-w-[375px] lg:max-w-[55rem] lg:w-fit lg:rounded-3xl lg:flex lg:flex-row-reverse ">
+    <div id="form-page" class="bg-customWhite flex flex-col max-w-sm lg:max-w-[55rem] lg:rounded-3xl lg:flex-row-reverse ">
       <picture class="max-w-full h-auto lg:p-6">
         <source class="" srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width: 1024px)">
         <img class="w-full h-auto" src="assets/images/illustration-sign-up-mobile.svg" alt="">   
@@ -31,26 +31,22 @@
         </form>
       </div>
     </div>
+    <div id="success-page" class="flex flex-col justify-center items-start bg-customWhite max-w-sm pt-36 px-5 py-10 lg:p-10 min-h-screen lg:min-h-min lg:max-w-sm lg:rounded-2xl">
+      <img src="assets/images/icon-success.svg" />
+      <h2 class="text-[2.5rem] font-bold text-customDarkSlateGrey leading-10 pt-7">Thanks for subscribing!</h2>
+      <p class="pt-7 text-customCharcoalGrey"> A confirmation email has been sent to <strong class="submitted-email"></strong>. 
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button id="dismiss-btn" class="bg-customDarkSlateGrey text-customWhite w-full p-4 font-bold rounded-lg hover:bg-gradient-to-r from-customTomato to-orange-400 mt-auto">Dismiss message</button>
+    </div>
   </main>
 
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  <div class="hidden">
-    <h2>Thanks for subscribing!</h2>
-    <p> A confirmation email has been sent to ash@loremcompany.com. 
-      Please open it and click the button inside to confirm your subscription.
-    </p>
-    <button>Dismiss message</button>
-  </div>
-
-  <!-- Success message end -->
 <script src="formHandling.js"></script>
 <script>
-  // Access the form element and attach the handleSubmit function to its submit event
   const form = document.getElementById('form');
   form.onsubmit = handleSubmit;
+  const dismissBtn = document.getElementById('dismiss-btn')
+  dismissBtn.onclick = handleDismiss;
 </script>
 </body>
 </html>
